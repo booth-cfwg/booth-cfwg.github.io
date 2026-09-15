@@ -44,15 +44,25 @@ pages. If you change one, change all four. It is four files — grep for the tex
 you are replacing:
 
 ```bash
-grep -rn "REPLACE@uchicago.edu" *.html
+grep -rn "cfwg.booth@gmail.com" *.html
 ```
 
 ## Before going live
 
-Replace every placeholder:
+Still placeholders:
 
-- `REPLACE@uchicago.edu` — the group's contact address
-- `Room XXX` — the meeting room
-- the mailing-list `href="#"` in `index.html`
+- `Room XXX` in `index.html` and `schedule.html` — the meeting room
 - example speakers in `schedule.html` and `archive.html`
-- names in `people.html`
+- `COORGANIZER-NAME@uchicago.edu` and the faculty/former-organizer names in
+  `people.html`
+
+Find them all with:
+
+```bash
+grep -rn "Room XXX\|Example Presenter\|COORGANIZER-NAME\|Faculty Name\|Jane Doe\|Richard Roe\|A. N. Other" *.html
+```
+
+Already set: the group contact address (`cfwg.booth@gmail.com`) in every footer,
+and the mailing-list link on the home page, which currently opens an email to
+that address. If the group later gets a real listserv, replace that one `mailto:`
+in `index.html` with its signup URL.
