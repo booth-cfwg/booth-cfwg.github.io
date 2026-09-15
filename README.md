@@ -1,9 +1,6 @@
 # Corporate Finance Working Group — website
 
-Jekyll site on GitHub Pages, built to match the structure of the sister site
-[booth-ap/booth-ap.github.io](https://github.com/booth-ap/booth-ap.github.io).
-GitHub builds it on every push, so a push is a deploy. Nothing to install
-locally.
+Jekyll site on GitHub Pages
 
 ## Files
 
