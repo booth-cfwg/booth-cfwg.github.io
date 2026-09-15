@@ -50,15 +50,5 @@ two places if you would rather match them exactly.
 Swapping themes is a one-line change to `theme:` in `_config.yml`. The supported
 set is listed at <https://pages.github.com/themes/>.
 
-## Still placeholders
-
-- `FACULTY-ADVISOR`, `PAST-YEAR`, `PAST-COORDINATOR` in `index.md`
-- `PRESENTER` and `ROOM` in `2026_Autumn.md`
-
-Find them with:
-
-```bash
-grep -rn "FACULTY-ADVISOR\|PAST-YEAR\|PAST-COORDINATOR\|PRESENTER\|ROOM" *.md
-```
 
 Already set: the group contact address, `cfwg.booth@gmail.com`, on the landing page.
