@@ -1,68 +1,64 @@
 # Corporate Finance Working Group — website
 
-Plain HTML and CSS, no build step. GitHub Pages serves the files exactly as
-they are in `main`, so a push is a deploy.
+Jekyll site on GitHub Pages, built to match the structure of the sister site
+[booth-ap/booth-ap.github.io](https://github.com/booth-ap/booth-ap.github.io).
+GitHub builds it on every push, so a push is a deploy. Nothing to install
+locally.
 
 ## Files
 
 | File | What it is |
 | --- | --- |
-| `index.html` | About the group, meeting logistics, how to attend and present |
-| `schedule.html` | Current quarter's talks |
-| `archive.html` | Past talks, grouped by academic year |
-| `people.html` | Organizers, faculty sponsors, former organizers |
-| `assets/css/style.css` | All styling — colors and fonts are variables at the top |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is instead of running Jekyll |
+| `_config.yml` | Theme and site title. Three lines. |
+| `index.md` | Landing page: description, advisors, coordinators, quarter index |
+| `2026_Autumn.md` | One file per quarter, holding that quarter's table |
+| `assets/css/style.scss` | The only styling override — link color |
 
-## Editing
+There is deliberately no `.nojekyll` file. Adding one would switch Jekyll off
+and make GitHub serve the raw Markdown instead of rendered pages.
 
-1. Open the `.html` file in any text editor.
-2. Make the change. Comments marked `EDIT:` or `ADD A TALK:` show where.
-3. Open the file in a browser to check it (double-click works — no server needed).
-4. Commit and push. The live site updates in about a minute.
+## Adding a new quarter
 
-### Adding a talk
+1. Create `2027_Winter.md` (copy `2026_Autumn.md` as a starting point).
+2. Add a section to the top of the `## Schedule & Topics` list in `index.md`:
 
-In `schedule.html`, copy an existing `<tr>` block, paste it in date order, and
-edit the date, speaker and paper. Drop the `<a href>` if there is no draft link.
+   ```markdown
+   ### Winter 2027
+   - Topics: Preliminary Project Ideas
+   - [Schedule](2027_Winter)
+   ```
 
-### Rolling over a quarter
+3. Commit and push. Live in about a minute.
 
-Move the finished quarter's `<tr>` rows from `schedule.html` into a new table in
-`archive.html`, above the existing ones. Then add the new quarter's dates to
-`schedule.html`.
+Link to the schedule **without** the `.md` extension, as shown. Jekyll renders
+`2027_Winter.md` to `2027_Winter.html`, and the extension-less form is the one
+that stays correct.
 
-### Changing the look
+## Editing a quarter
 
-Edit the variables at the top of `assets/css/style.css`. `--maroon` is the accent
-color used for links, rules and headings; `--measure` and `--page` control width.
+The tables are ordinary Markdown. Keep the `| :--- |` separator row — it sets
+left alignment. Column widths do not need to line up; Markdown ignores the
+whitespace.
 
-## A caveat about the header
+## Changing the look
 
-There is no templating, so the header, nav and footer are copied into all four
-pages. If you change one, change all four. It is four files — grep for the text
-you are replacing:
+The theme is `jekyll-theme-minimal`, one of the themes GitHub Pages supports
+natively. `assets/css/style.scss` imports it and then overrides the link color
+to maroon (`#800000`). The asset-pricing group uses teal (`#345053`) in the same
+two places if you would rather match them exactly.
 
-```bash
-grep -rn "cfwg.booth@gmail.com" *.html
-```
+Swapping themes is a one-line change to `theme:` in `_config.yml`. The supported
+set is listed at <https://pages.github.com/themes/>.
 
-## Before going live
+## Still placeholders
 
-Still placeholders:
+- `FACULTY-ADVISOR`, `PAST-YEAR`, `PAST-COORDINATOR` in `index.md`
+- `PRESENTER` and `ROOM` in `2026_Autumn.md`
 
-- `Room XXX` in `index.html` and `schedule.html` — the meeting room
-- example speakers in `schedule.html` and `archive.html`
-- `COORGANIZER-NAME@uchicago.edu` and the faculty/former-organizer names in
-  `people.html`
-
-Find them all with:
+Find them with:
 
 ```bash
-grep -rn "Room XXX\|Example Presenter\|COORGANIZER-NAME\|Faculty Name\|Jane Doe\|Richard Roe\|A. N. Other" *.html
+grep -rn "FACULTY-ADVISOR\|PAST-YEAR\|PAST-COORDINATOR\|PRESENTER\|ROOM" *.md
 ```
 
-Already set: the group contact address (`cfwg.booth@gmail.com`) in every footer,
-and the mailing-list link on the home page, which currently opens an email to
-that address. If the group later gets a real listserv, replace that one `mailto:`
-in `index.html` with its signup URL.
+Already set: the group contact address, `cfwg.booth@gmail.com`, on the landing page.
