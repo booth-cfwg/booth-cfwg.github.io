@@ -8,6 +8,12 @@ The Chicago Booth Corporate Finance Working Group is a weekly session in which s
 
 To join the mailing list or to volunteer to present, email [cfwg.booth@gmail.com](mailto:cfwg.booth@gmail.com).
 
+## Schedule & Topics
+
+### Autumn 2026
+- Topics: Preliminary Project Ideas
+- [Schedule](2026_Autumn)
+
 ## Working Group Rules:
 
 - All participating students will attend each week and present once per quarter
@@ -20,8 +26,3 @@ To join the mailing list or to volunteer to present, email [cfwg.booth@gmail.com
 - It is okay for students to abandon or significantly revise a project after getting feedback
 
 
-## Schedule & Topics
-
-### Autumn 2026
-- Topics: Preliminary Project Ideas
-- [Schedule](2026_Autumn)
