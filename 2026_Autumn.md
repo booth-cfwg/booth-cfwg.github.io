@@ -10,6 +10,6 @@
 | Oct 20, 2026, 3:00 to 4:00 pm | Jacob Hartwig | 3SW |Dynamic Credit Limits|
 | Oct 27, 2026, 3:00 to 4:00 pm | Gianluca Yong Gonzalez | 3SW |Skill Transferability and Household Financial Decisions|
 | Nov 3, 2026, 3:00 to 4:00 pm | Lauren Mostrom | 3SW |Supply Chain Risk Management: Operational Hedging in Firm Networks|
-| Nov 10, 2026, 3:00 to 4:00 pm | Rahul Singh Chauhan | 3SW |Non-Banks and Firm Dynamics|
+| Nov 10, 2026, 3:00 to 4:00 pm | Rahul Singh Chauhan | 3SW |Spatial Origins of Bank Franchise Value|
 | Nov 17, 2026, 3:00 to 4:00 pm | Connor Brennan | 3SW |Technological Abandonment and Marking Externality
 | Dec 1, 2026, 3:00 to 4:00 pm | Yifan Wang | 3SW |TBA|
